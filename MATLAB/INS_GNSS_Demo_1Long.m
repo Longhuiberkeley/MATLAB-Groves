@@ -123,6 +123,9 @@ TC_KF_config.pseudo_range_SD = 2.5;
 % Pseudo-range rate measurement noise SD (m/s)
 TC_KF_config.range_rate_SD = 0.1;
 
+Vehicle_config.latnoise = 0.1;
+Vehicle_config.vertnoise = 0.1;
+
 % Seeding of the random number generator for reproducability. Change 
 % this value for a different random number sequence (may not work in Octave).
 % RandStream.setDefaultStream(RandStream('mt19937ar','seed',1));
@@ -140,8 +143,8 @@ end %if
 % Tightly coupled ECEF Inertial navigation and GNSS integrated navigation
 % simulation
 [out_profile,out_errors,out_IMU_bias_est,out_clock,out_KF_SD] =...
-    Tightly_coupled_INS_GNSS(in_profile,no_epochs,initialization_errors...
-    ,IMU_errors,GNSS_config,TC_KF_config);
+    Tightly_coupled_INS_GNSSLong(in_profile,no_epochs,initialization_errors...
+    ,IMU_errors,GNSS_config,TC_KF_config, Vehicle_config);
 
 % Plot the input motion profile and the errors (may not work in Octave).
 close all;

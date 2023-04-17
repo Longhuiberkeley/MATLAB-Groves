@@ -16,7 +16,7 @@ function [r_eb_e,v_eb_e,C_b_e] = Nav_equations_ECEF(tor_i,old_r_eb_e,...
 %   old_v_eb_e    previous velocity of body frame w.r.t. ECEF frame, resolved
 %                 along ECEF-frame axes (m/s)
 %   f_ib_b        specific force of body frame w.r.t. ECEF frame, resolved
-%                 along body-frame axes, averaged over time interval (m/s^2)
+%                 along body-frame axes, ave raged over time interval (m/s^2)
 %   omega_ib_b    angular rate of body frame w.r.t. ECEF frame, resolved
 %                 about body-frame axes, averaged over time interval (rad/s)
 % Outputs:

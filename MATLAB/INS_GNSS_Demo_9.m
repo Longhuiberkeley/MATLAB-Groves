@@ -125,7 +125,8 @@ TC_KF_config.range_rate_SD = 0.1;
 
 % Seeding of the random number generator for reproducability. Change 
 % this value for a different random number sequence (may not work in Octave).
-RandStream.setDefaultStream(RandStream('mt19937ar','seed',1));
+
+% RandStream.setDefaultStream(RandStream('mt19937ar','seed',1));
 
 % Begins
 
